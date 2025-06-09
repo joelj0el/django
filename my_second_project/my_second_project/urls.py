@@ -16,7 +16,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from my_first_app.views import myView  # Corregido: importando desde my_first_app.views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('car-list/', myView, name='car-list'),
 ]
